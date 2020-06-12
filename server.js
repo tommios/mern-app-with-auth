@@ -13,6 +13,19 @@ app.use(
 );
 app.use(bodyParser.json());
 
+// DB Config
+const url = require("./config").MONGODB_URI;
+
+// Connect to MongoDB
+mongoose
+  .connect(url, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useFindAndModify: false,
+  })
+  .then(() => console.log("MongoDB succesfully connected!"))
+  .catch((err) => console.log(err));
+
 // simple route to check server operation
 app.get("/", (req, res) => {
   res.json({
@@ -21,4 +34,4 @@ app.get("/", (req, res) => {
 });
 
 const port = process.env.PORT || 5000;
-app.listen(port, () => console.log(`Server up and running on port ${port} !`));
+app.listen(port, () => console.log(`Server up and running on port ${port}!`));
