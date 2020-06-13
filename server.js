@@ -5,6 +5,7 @@ const passport = require("passport");
 
 const register = require("./routes/api/register");
 const login = require("./routes/api/login");
+const employees = require("./routes/api/employees");
 
 const app = express();
 
@@ -22,6 +23,7 @@ const url = require("./config").MONGODB_URI;
 // Connect to MongoDB
 mongoose
   .connect(url, {
+    useCreateIndex: true,
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: false,
@@ -38,6 +40,7 @@ require("./config/passport")(passport);
 // Routes
 app.use("/api/users/", register);
 app.use("/api/users/", login);
+app.use("/api/employees/", employees);
 
 // simple route to check server operation
 app.get("/", (req, res) => {
