@@ -7,6 +7,7 @@
 | POST    | `/api/users/register` | signup new account                 |
 | POST    | `/api/users/login`    | login an account                   |
 |         |                       |                                    |
+|         |                       |                                    |
 | POST    | `/api/employees/`     | create a new Employee              |
 | GET     | `/api/employees/`     | retrieve all Employees             |
 | GET     | `/api/employees/:id`  | retrieve a single Employee with id |
