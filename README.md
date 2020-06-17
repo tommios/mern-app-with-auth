@@ -1,5 +1,9 @@
 ## Login/Auth App with the MERN Stack — (Backend)
 
+In the project directory, you can run development mode:
+
+### `npm run dev`
+
 #### These are the APIs we provide:
 
 | Methods | Urls                  | Actions                            |
