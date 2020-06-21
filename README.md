@@ -1,8 +1,27 @@
-## Login/Auth App with the MERN Stack — (Backend)
+# Login/Auth App with the MERN Stack — (Backend)
 
-In the project directory, you can run development mode:
+## Configuration
 
-### `npm run dev`
+Add your own `MONGOURI` from your MongoDB database in `config/keys.dev.js`.
+
+```javascript
+module.exports = {
+  MONGODB_URI: "YOUR_MONGO_URI_HERE",
+  SECRET_OR_KEY: "secret",
+};
+```
+
+## Running locally
+
+```javascript
+// Install dependencies for server & client
+npm install && npm run client-install
+
+// Run client & server with concurrently
+npm run dev
+
+// Server runs on http://localhost:5000 and client on http://localhost:3000
+```
 
 #### These are the APIs we provide:
 
