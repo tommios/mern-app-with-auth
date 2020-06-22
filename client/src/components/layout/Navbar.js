@@ -11,12 +11,13 @@ class Navbar extends Component {
               to="/"
               style={{
                 fontFamily: "monospace",
+                marginLeft: "10px",
               }}
               className="brand-logo"
             >
-              <i className="material-icons">code</i>
-              MERN App
+              MERN
             </Link>
+
             <ul id="nav-mobile" className="right hide-on-med-and-down">
               <li>
                 <Link to="/">Dashboard</Link>
