@@ -17,6 +17,13 @@ class Register extends Component {
     };
   }
 
+  componentDidMount() {
+    // If logged in and user navigates to Register page, should redirect them to dashboard
+    if (this.props.auth.isAuthenticated) {
+      this.props.history.push("/dashboard");
+    }
+  }
+
   componentWillReceiveProps(nextProps) {
     if (nextProps.errors) {
       this.setState({
@@ -50,6 +57,7 @@ class Register extends Component {
               <i className="material-icons left">keyboard_backspace</i> Back to
               home
             </Link>
+
             <div className="col s12" style={{ paddingLeft: "11.250px" }}>
               <h4>
                 <b>Register</b> below
@@ -58,6 +66,7 @@ class Register extends Component {
                 Already have an account? <Link to="/login">Log in</Link>
               </p>
             </div>
+
             <form noValidate onSubmit={this.onSubmit}>
               <div className="input-field col s12">
                 <input
@@ -70,9 +79,12 @@ class Register extends Component {
                     invalid: errors.name,
                   })}
                 />
+
                 <label htmlFor="name">Name</label>
+
                 <span className="red-text">{errors.name}</span>
               </div>
+
               <div className="input-field col s12">
                 <input
                   onChange={this.onChange}
@@ -84,9 +96,12 @@ class Register extends Component {
                     invalid: errors.email,
                   })}
                 />
+
                 <label htmlFor="email">Email</label>
+
                 <span className="red-text">{errors.email}</span>
               </div>
+
               <div className="input-field col s12">
                 <input
                   onChange={this.onChange}
@@ -98,9 +113,12 @@ class Register extends Component {
                     invalid: errors.password,
                   })}
                 />
+
                 <label htmlFor="password">Password</label>
+
                 <span className="red-text">{errors.password}</span>
               </div>
+
               <div className="input-field col s12">
                 <input
                   onChange={this.onChange}
@@ -112,9 +130,12 @@ class Register extends Component {
                     invalid: errors.password2,
                   })}
                 />
+
                 <label htmlFor="password2">Confirm Password</label>
+
                 <span className="red-text">{errors.password2}</span>
               </div>
+
               <div className="col s12" style={{ paddingLeft: "11.250px" }}>
                 <button
                   style={{
