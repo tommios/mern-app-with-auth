@@ -20,7 +20,7 @@ class Navbar extends Component {
 
             <ul id="nav-mobile" className="right hide-on-med-and-down">
               <li>
-                <Link to="/">Dashboard</Link>
+                <Link to="/dashboard">Dashboard</Link>
               </li>
               <li>
                 <Link to="/login">Log In</Link>
@@ -35,4 +35,5 @@ class Navbar extends Component {
     );
   }
 }
+
 export default Navbar;

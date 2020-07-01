@@ -14,7 +14,6 @@ export default class Employee extends Component {
     this.onChangePosition = this.onChangePosition.bind(this);
 
     this.getEmployee = this.getEmployee.bind(this);
-    // this.updatePublished = this.updatePublished.bind(this);
     this.updateEmployee = this.updateEmployee.bind(this);
     this.deleteEmployee = this.deleteEmployee.bind(this);
 
